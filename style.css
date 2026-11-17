@@ -1,27 +1,27 @@
 /* Cherry Blossom (default) and Matcha Latte themes. */
 :root, [data-theme="cherry"]{
-  --bg:#FBD9E1;
+  --bg:#FCDEE5;
   --paper:#FFFFFF;
-  --card-alt:#E89AB0;
-  --accent:#E89AB0;
-  --deep:#C2607A;
-  --ink:#5A2A38;
-  --muted:color-mix(in srgb, #5A2A38 82%, #FFFFFF);
-  --blob-a:#E89AB0;
+  --card-alt:#EBA7BA;
+  --accent:#EBA7BA;
+  --deep:#CA758B;
+  --ink:#643744;
+  --muted:color-mix(in srgb, #643744 82%, #FFFFFF);
+  --blob-a:#EBA7BA;
   --blob-b:#FFFFFF;
   --font-display:"Fraunces",Georgia,serif;
   --font:"Nunito",system-ui,sans-serif;
 }
 [data-theme="matcha"]{
-  --bg:#B5C99A;
-  --paper:#EDE3D1;
-  --card-alt:#D9C7A7;
-  --accent:#D9C7A7;
-  --deep:#8A9A5B;
-  --ink:#5C4033;
-  --muted:color-mix(in srgb, #5C4033 84%, #EDE3D1);
-  --blob-a:#8A9A5B;
-  --blob-b:#D9C7A7;
+  --bg:#BFD0A7;
+  --paper:#EFE7D7;
+  --card-alt:#DECEB2;
+  --accent:#DECEB2;
+  --deep:#99A770;
+  --ink:#664B3F;
+  --muted:color-mix(in srgb, #664B3F 84%, #EFE7D7);
+  --blob-a:#99A770;
+  --blob-b:#DECEB2;
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
