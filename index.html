@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="cherry">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -10,14 +10,35 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,800;1,9..144,600;1,9..144,800&family=Nunito:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script>
+    (function () {
+      var KEY = "projects.theme.v1";
+      var theme = "cherry";
+      try {
+        var q = new URLSearchParams(location.search).get("theme");
+        if (q === "matcha" || q === "cherry") theme = q;
+        else {
+          var saved = localStorage.getItem(KEY);
+          if (saved === "matcha" || saved === "cherry") theme = saved;
+        }
+      } catch (e) {}
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
 </head>
 <body>
   <div class="page">
-    <header class="mast">
-      <p class="kicker">Lily Wong</p>
-      <h1>Projects</h1>
-      <p class="lead">Sites and things I’ve made so far.</p>
-    </header>
+    <div class="top">
+      <header class="mast">
+        <p class="kicker">Lily Wong</p>
+        <h1>Projects</h1>
+        <p class="lead">Sites and things I’ve made so far.</p>
+      </header>
+      <div class="theme-toggle" role="group" aria-label="Color theme">
+        <button type="button" data-theme="cherry" aria-pressed="true">Cherry Blossom</button>
+        <button type="button" data-theme="matcha" aria-pressed="false">Matcha Latte</button>
+      </div>
+    </div>
 
     <main class="grid">
       <a class="card" href="https://lilyofthevalley1618.github.io/lilywong/">
@@ -67,5 +88,27 @@
       <p>All of these are live sites. Made by Lily Wong.</p>
     </footer>
   </div>
+  <script>
+    (function () {
+      var KEY = "projects.theme.v1";
+      function current() {
+        return document.documentElement.getAttribute("data-theme") === "matcha" ? "matcha" : "cherry";
+      }
+      function apply(theme, save) {
+        var t = theme === "matcha" ? "matcha" : "cherry";
+        document.documentElement.setAttribute("data-theme", t);
+        document.querySelectorAll(".theme-toggle [data-theme]").forEach(function (btn) {
+          btn.setAttribute("aria-pressed", btn.getAttribute("data-theme") === t ? "true" : "false");
+        });
+        if (save !== false) {
+          try { localStorage.setItem(KEY, t); } catch (e) {}
+        }
+      }
+      apply(current(), false);
+      document.querySelectorAll(".theme-toggle [data-theme]").forEach(function (btn) {
+        btn.addEventListener("click", function () { apply(btn.getAttribute("data-theme")); });
+      });
+    })();
+  </script>
 </body>
 </html>
