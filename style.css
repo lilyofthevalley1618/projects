@@ -1,27 +1,27 @@
 /* Cherry Blossom (default) and Matcha Latte themes. */
 :root, [data-theme="cherry"]{
-  --bg:#FCDEE5;
+  --bg:#FDE8ED;
   --paper:#FFFFFF;
-  --card-alt:#EBA7BA;
-  --accent:#EBA7BA;
-  --deep:#CA758B;
+  --card-alt:#F1C2D0;
+  --accent:#F1C2D0;
+  --deep:#D490A2;
   --ink:#643744;
   --muted:color-mix(in srgb, #643744 82%, #FFFFFF);
-  --blob-a:#EBA7BA;
+  --blob-a:#F1C2D0;
   --blob-b:#FFFFFF;
   --font-display:"Fraunces",Georgia,serif;
   --font:"Nunito",system-ui,sans-serif;
 }
 [data-theme="matcha"]{
-  --bg:#BFD0A7;
-  --paper:#EFE7D7;
-  --card-alt:#DECEB2;
-  --accent:#DECEB2;
-  --deep:#99A770;
+  --bg:#D3DFC2;
+  --paper:#F4EEE3;
+  --card-alt:#E8DDCA;
+  --accent:#E8DDCA;
+  --deep:#ADB88C;
   --ink:#664B3F;
-  --muted:color-mix(in srgb, #664B3F 84%, #EFE7D7);
-  --blob-a:#99A770;
-  --blob-b:#DECEB2;
+  --muted:color-mix(in srgb, #664B3F 84%, #F4EEE3);
+  --blob-a:#ADB88C;
+  --blob-b:#E8DDCA;
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
